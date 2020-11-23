@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our test</title>
-    <p>hello</p>
-    <p>hello again</p>
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href=style.css>
+    <script src= index.js defer></script>
+    <title>Marker</title>
+</head>
+<body>
+    <header></header>
+ 
+    <nav>
+    <ul class=left>
+        <li>Quire</li>
+        <li>Add note</li>
+        <li>Search</li>
+        <li>Favourite</li>
+        <li>Print</li>
+        <li>Settings</li>
+        <li>Statistics</li>
+    </ul>
+    <ul class= "posts">
+        <li>New post</li>
+        <li>Old post 1</li>
+        <li>Old post 2</li>
+    </ul>
+    </nav>
+       
 
-
+    <main>
+        <div class="the-editor">
+            <div id="editor">This is some sample content.</div>
+            <script>
+                    ClassicEditor
+                            .create( document.querySelector( '#editor' ) )
+                            .then( editor => {
+                                    console.log( editor );
+                            } )
+                            .catch( error => {
+                                    console.error( error );
+                            });
+                            
+            </script>
+        </div>
+    </main>
+    <footer></footer>    
 </body>
 </html>
